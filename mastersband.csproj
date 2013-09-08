@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50161614-6331-4660-A858-D9A493472420}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mastersband</RootNamespace>
+    <AssemblyName>mastersband</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="assets\audio\ajryan\ajryan - Anvil.mp3" />
+    <Content Include="assets\audio\ajryan\ajryan - Break Your Heart.mp3" />
+    <Content Include="assets\audio\ajryan\ajryan - Crackle.mp3" />
+    <Content Include="assets\audio\ajryan\ajryan - Diamonds In The Rough %28John Prine%29.mp3" />
+    <Content Include="assets\audio\ajryan\ajryan - Domestic Life.mp3" />
+    <Content Include="assets\audio\ajryan\ajryan - Heavy Enough 2.mp3" />
+    <Content Include="assets\audio\ajryan\ajryan - Heavy Enough.mp3" />
+    <Content Include="assets\audio\ajryan\ajryan - I Shall Be Released %28The Band%29.mp3" />
+    <Content Include="assets\audio\ajryan\ajryan - I Think Your Hand Was On Me.mp3" />
+    <Content Include="assets\audio\ajryan\ajryan - Kingdom Come %28The Band%29.mp3" />
+    <Content Include="assets\audio\ajryan\ajryan - Magazines.mp3" />
+    <Content Include="assets\audio\ajryan\ajryan - Paper Bag %28Fiona Apple%29.mp3" />
+    <Content Include="assets\audio\ajryan\ajryan - Robot Baby.mp3" />
+    <Content Include="assets\audio\ajryan\ajryan - Tree Veins.mp3" />
+    <Content Include="assets\audio\ajryan\ajryan - Worrier King %28Warren Zevon%29.mp3" />
+    <Content Include="assets\audio\ajryan\folder.jpg" />
+    <Content Include="assets\audio\ajryan\Shex - Anthem.mp3" />
+    <Content Include="assets\audio\ajryan\Shex - Wouldn%27t U Like 2 B.mp3" />
+    <Content Include="assets\audio\collab\Aidan and Tom Ryan - Drown Me Dear Lord.mp3" />
+    <Content Include="assets\audio\collab\Aidan and Tom Ryan - It Won%27t Stop.mp3" />
+    <Content Include="assets\audio\collab\Aidan and Tom Ryan - Sheila.mp3" />
+    <Content Include="assets\audio\collab\Aidan and Tom Ryan - Slim.mp3" />
+    <Content Include="assets\audio\collab\Ben Chaucer - Red Rocking Chair %28Traditional%29.mp3" />
+    <Content Include="assets\audio\collab\folder.jpg" />
+    <Content Include="assets\audio\collab\Leftside Bend - Bloody Parts.mp3" />
+    <Content Include="assets\audio\collab\Leftside Bend - Fall.mp3" />
+    <Content Include="assets\audio\collab\Leftside Bend - Montana.mp3" />
+    <Content Include="assets\audio\collab\Leftside Bend - Note.mp3" />
+    <Content Include="assets\audio\collab\Leftside Bend - On My Own.mp3" />
+    <Content Include="assets\audio\collab\Ryan Shultzaberger - Drown Me Dear Lord.mp3" />
+    <Content Include="assets\audio\collab\Tom Ryan - Don%27t Go Far.mp3" />
+    <Content Include="assets\audio\collab\Tom Ryan - Forbidden Fruit.mp3" />
+    <Content Include="assets\audio\motu_beak\folder.jpg" />
+    <Content Include="assets\audio\motu_beak\Masters of the Universe - Beak - 01 Babysnatching.mp3" />
+    <Content Include="assets\audio\motu_beak\Masters of the Universe - Beak - 02 Hope I Don%27t Fall In Love With You  Stepping Stone.mp3" />
+    <Content Include="assets\audio\motu_beak\Masters of the Universe - Beak - 03 Making Things.mp3" />
+    <Content Include="assets\audio\motu_beak\Masters of the Universe - Beak - 04 Blank White Cards.mp3" />
+    <Content Include="assets\audio\motu_beak\Masters of the Universe - Beak - 05 Knoxville.mp3" />
+    <Content Include="assets\audio\motu_beak\Masters of the Universe - Beak - 06 Found.mp3" />
+    <Content Include="assets\audio\motu_dbtb\folder.jpg" />
+    <Content Include="assets\audio\motu_dbtb\Masters of the Universe - Don%27t Block the Box - 01 Tree Veins.mp3" />
+    <Content Include="assets\audio\motu_dbtb\Masters of the Universe - Don%27t Block the Box - 02 Babysnatching Prelude.mp3" />
+    <Content Include="assets\audio\motu_dbtb\Masters of the Universe - Don%27t Block the Box - 03 Babysnatching.mp3" />
+    <Content Include="assets\audio\motu_dbtb\Masters of the Universe - Don%27t Block the Box - 04 Chase.mp3" />
+    <Content Include="assets\audio\motu_dbtb\Masters of the Universe - Don%27t Block the Box - 05 Knoxville.mp3" />
+    <Content Include="assets\audio\motu_dbtb\Masters of the Universe - Don%27t Block the Box - 06 Disco Appalachia.mp3" />
+    <Content Include="assets\audio\motu_dbtb\Masters of the Universe - Don%27t Block the Box - 07 Dbys.mp3" />
+    <Content Include="assets\audio\motu_dbtb\Masters of the Universe - Don%27t Block the Box - 08 Blank White Cards.mp3" />
+    <Content Include="assets\audio\motu_dbtb\Masters of the Universe - Don%27t Block the Box - 09 Paper BagSimilar to Rain.mp3" />
+    <Content Include="assets\audio\motu_dbtb\Masters of the Universe - Don%27t Block the Box - 10 Broken Leg.mp3" />
+    <Content Include="assets\audio\motu_dbtb\Masters of the Universe - Don%27t Block the Box - 11 Alien Escape.mp3" />
+    <Content Include="assets\audio\motu_other\folder.jpg" />
+    <Content Include="assets\audio\motu_other\Masters of the Universe - Campbell.mp3" />
+    <Content Include="assets\audio\motu_other\Masters of the Universe - DBYS.mp3" />
+    <Content Include="assets\audio\motu_other\Masters of the Universe - Disco Appalachia.mp3" />
+    <Content Include="assets\audio\motu_other\Masters of the Universe - Echolocate 2.mp3" />
+    <Content Include="assets\audio\motu_other\Masters of the Universe - Echolocate.mp3" />
+    <Content Include="assets\audio\motu_other\Masters of the Universe - Footsteps %28Pearl Jam%29.mp3" />
+    <Content Include="assets\audio\motu_other\Masters of the Universe - Knoxville.mp3" />
+    <Content Include="assets\audio\motu_other\Masters of the Universe - Let%27s Get it On %28Marvin Gaye%29.mp3" />
+    <Content Include="assets\audio\motu_other\Masters of the Universe - Please.mp3" />
+    <Content Include="assets\audio\motu_other\Masters of the Universe - Quiet Room.mp3" />
+    <Content Include="assets\audio\motu_other\Masters of the Universe - Sketch - Dylan.mp3" />
+    <Content Include="assets\audio\motu_other\Masters of the Universe - Sketch - Pretty Lie.mp3" />
+    <Content Include="assets\audio\motu_other\Masters of the Universe - Sketch - Song 22.mp3" />
+    <Content Include="assets\audio\motu_other\Masters of the Universe - We%27ll Last.mp3" />
+    <Content Include="assets\image\buttons\01.jpg" />
+    <Content Include="assets\image\buttons\02.jpg" />
+    <Content Include="assets\image\buttons\03.jpg" />
+    <Content Include="assets\image\buttons\04.jpg" />
+    <Content Include="assets\image\buttons\05.jpg" />
+    <Content Include="assets\image\flyers\bigposter.JPG" />
+    <Content Include="assets\image\flyers\bigposter_small.JPG" />
+    <Content Include="assets\image\flyers\lunchflier.jpg" />
+    <Content Include="assets\image\flyers\lunchflier_small.jpg" />
+    <Content Include="assets\image\flyers\promo_pic.jpg" />
+    <Content Include="assets\image\flyers\promo_pic_small.jpg" />
+    <Content Include="assets\image\people\aidan.jpg" />
+    <Content Include="assets\image\people\aidan_guitar.jpg" />
+    <Content Include="assets\image\people\aidan_guitar_small.jpg" />
+    <Content Include="assets\image\people\aidan_small.jpg" />
+    <Content Include="assets\image\people\bing.jpg" />
+    <Content Include="assets\image\people\bing_small.jpg" />
+    <Content Include="assets\image\people\grog.jpg" />
+    <Content Include="assets\image\people\grog_small.jpg" />
+    <Content Include="assets\image\people\group.jpg" />
+    <Content Include="assets\image\people\group_02.jpg" />
+    <Content Include="assets\image\people\group_02_small.jpg" />
+    <Content Include="assets\image\people\group_cartoon.gif" />
+    <Content Include="assets\image\people\group_cartoon_small.gif" />
+    <Content Include="assets\image\people\group_small.jpg" />
+    <Content Include="assets\image\people\kelly.jpg" />
+    <Content Include="assets\image\people\kelly_small.jpg" />
+    <Content Include="assets\image\press\gazette_thumb.jpg" />
+    <Content Include="assets\image\ragtime\01.jpg" />
+    <Content Include="assets\image\ragtime\01_small.jpg" />
+    <Content Include="assets\image\ragtime\02.jpg" />
+    <Content Include="assets\image\ragtime\02_small.jpg" />
+    <Content Include="assets\image\ragtime\03.jpg" />
+    <Content Include="assets\image\ragtime\03_small.jpg" />
+    <Content Include="assets\image\ragtime\04.jpg" />
+    <Content Include="assets\image\ragtime\04_small.jpg" />
+    <Content Include="assets\image\ragtime\05.jpg" />
+    <Content Include="assets\image\ragtime\05_small.jpg" />
+    <Content Include="assets\image\ragtime\06.jpg" />
+    <Content Include="assets\image\ragtime\06_small.jpg" />
+    <Content Include="assets\image\ragtime\07.jpg" />
+    <Content Include="assets\image\ragtime\07_small.jpg" />
+    <Content Include="assets\image\ragtime\08.jpg" />
+    <Content Include="assets\image\ragtime\08_small.jpg" />
+    <Content Include="assets\image\ragtime\09.jpg" />
+    <Content Include="assets\image\ragtime\09_small.jpg" />
+    <Content Include="assets\image\ragtime\10.jpg" />
+    <Content Include="assets\image\ragtime\10_small.jpg" />
+    <Content Include="assets\image\ragtime\11.jpg" />
+    <Content Include="assets\image\ragtime\11_small.jpg" />
+    <Content Include="assets\image\ragtime\12.jpg" />
+    <Content Include="assets\image\ragtime\12_small.jpg" />
+    <Content Include="assets\image\remastering_stills\01.jpg" />
+    <Content Include="assets\image\remastering_stills\01_small.jpg" />
+    <Content Include="assets\image\remastering_stills\02.jpg" />
+    <Content Include="assets\image\remastering_stills\02_small.jpg" />
+    <Content Include="assets\image\remastering_stills\03.jpg" />
+    <Content Include="assets\image\remastering_stills\03_small.jpg" />
+    <Content Include="assets\image\remastering_stills\04.jpg" />
+    <Content Include="assets\image\remastering_stills\04_small.jpg" />
+    <Content Include="assets\image\remastering_stills\05.jpg" />
+    <Content Include="assets\image\remastering_stills\05_small.jpg" />
+    <Content Include="assets\image\remastering_stills\06.jpg" />
+    <Content Include="assets\image\remastering_stills\06_small.jpg" />
+    <Content Include="assets\image\remastering_stills\07.jpg" />
+    <Content Include="assets\image\remastering_stills\07_small.jpg" />
+    <Content Include="assets\image\remastering_stills\08.jpg" />
+    <Content Include="assets\image\remastering_stills\08_small.jpg" />
+    <Content Include="assets\image\remastering_stills\09.jpg" />
+    <Content Include="assets\image\remastering_stills\09_small.jpg" />
+    <Content Include="assets\image\remastering_stills\10.jpg" />
+    <Content Include="assets\image\remastering_stills\10_small.jpg" />
+    <Content Include="assets\image\remastering_stills\11.jpg" />
+    <Content Include="assets\image\remastering_stills\11_small.jpg" />
+    <Content Include="assets\image\remastering_stills\12.jpg" />
+    <Content Include="assets\image\remastering_stills\12_small.jpg" />
+    <Content Include="assets\image\remastering_stills\13.jpg" />
+    <Content Include="assets\image\remastering_stills\13_small.jpg" />
+    <Content Include="assets\image\remastering_stills\14.jpg" />
+    <Content Include="assets\image\remastering_stills\14_small.jpg" />
+    <Content Include="assets\image\remastering_stills\15.jpg" />
+    <Content Include="assets\image\remastering_stills\15_small.jpg" />
+    <Content Include="assets\image\remastering_stills\16.jpg" />
+    <Content Include="assets\image\remastering_stills\16_small.jpg" />
+    <Content Include="assets\image\remastering_stills\17.jpg" />
+    <Content Include="assets\image\remastering_stills\17_small.jpg" />
+    <Content Include="assets\image\remastering_stills\18.jpg" />
+    <Content Include="assets\image\remastering_stills\18_small.jpg" />
+    <Content Include="assets\image\remastering_stills\19.jpg" />
+    <Content Include="assets\image\remastering_stills\19_small.jpg" />
+    <Content Include="assets\image\remastering_stills\20.jpg" />
+    <Content Include="assets\image\remastering_stills\20_small.jpg" />
+    <Content Include="assets\text\bio.txt" />
+    <Content Include="assets\text\shows.txt" />
+    <Content Include="assets\video\motu_dvd_cover.jpg" />
+    <Content Include="assets\video\remastering_postr.mov" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\text\babysnatching story.doc" />
+    <Content Include="assets\text\press-frederick_gazette.pdf" />
+    <Content Include="assets\text\press-kingfarm_chronicle.pdf" />
+    <Content Include="assets\text\promo_package.doc" />
+    <Content Include="assets\text\SongList28AUG04.doc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62227/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
