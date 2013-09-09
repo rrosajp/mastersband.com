@@ -10,6 +10,7 @@ namespace mastersband.Helpers
     {
         public static MvcHtmlString Playlist(string sourceRelativePath)
         {
+            return new MvcHtmlString("");
         }
     }
 }
