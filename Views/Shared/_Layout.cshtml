@@ -1,0 +1,25 @@
+﻿@using System.Web.Optimization
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Masters of the Universe</title>
+
+    @Styles.Render("~/CSS/styles")
+    @RenderSection("styles", false)
+    <!--[if lt IE 9]>
+    <script src="~/JavaScript/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="page-center">
+        <header>
+            <div class="hero">@RenderSection("hero", true)</div>
+            <h1 class="logo">Masters of the Universe</h1>
+        </header>
+        @RenderBody()
+    </div>
+</body>
+</html>

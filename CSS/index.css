@@ -1,0 +1,51 @@
+﻿/* audio player */
+
+.audio-player {
+    background-color: #dfdfdf;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.audio-player audio {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.album-title {
+    margin: 0;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.playlist {
+    height: 100px;
+    width: 100%;
+}
+    .playlist img {
+        height: 100%;
+        float: left;
+    }
+
+.playlist-entries {
+    height: 100%;
+    margin: 0 0 0 115px;
+    overflow-y: scroll;
+}
+
+/* menu */
+.site-menu {
+    max-width: 75%;
+    margin: 2em auto;
+}
+
+.site-links {
+    padding: 0;
+}
+.site-link {
+    display: block;
+    font-size: 2em;
+    margin: 0 0 1em 0;
+    padding: 0.5em;
+    background-color: #dfdfdf;
+}
