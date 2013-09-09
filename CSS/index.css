@@ -45,7 +45,24 @@
 .site-link {
     display: block;
     font-size: 2em;
+    height: 2em;
     margin: 0 0 1em 0;
-    padding: 0.5em;
+    padding: 0;
     background-color: #dfdfdf;
 }
+.site-link a {
+    padding: 0 0.5em;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    line-height: 2em;
+    position: relative;
+}
+    .site-link a img {
+        position: absolute;
+        top: 0.25em;
+    }
+
+    .site-link a span {
+        padding-left: 2em;
+    }

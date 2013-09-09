@@ -10,7 +10,7 @@
 <div class="audio-player">
     <h2 class="album-title">Don't Block the Box</h2>
     <div class="playlist clearfix">
-        <img src="~/assets/audio/motu_dbtb/folder_thumb.jpg"/>
+        <img src="~/assets/audio/motu_dbtb/folder_thumb.jpg" />
         <ul class="playlist-entries">
             <li>First</li>
             <li>Second</li>
@@ -22,23 +22,31 @@
         </ul>
     </div>
     <audio id="audio" preload="auto" tabindex="0" controls>
-        <source src="~/assets/audio/motu_dbtb/Masters of the Universe - Don't Block the Box - 01 Tree Veins.mp3"/>
+        <source src="~/assets/audio/motu_dbtb/Masters of the Universe - Don't Block the Box - 01 Tree Veins.mp3" />
         <p>Your browser does not support HTML5 audio. Download link: XXX</p>
     </audio>
 </div>
 <div class="site-menu">
     <ul class="site-links">
         <li class="site-link">
-            Music
+            <a href="@Url.Action("Music")">
+                <img src="~/assets/web/music_link.png" /><span>Music</span>
+            </a>
         </li>
         <li class="site-link">
-            Images
+            <a href="@Url.Action("Images")">
+                <img src="~/assets/web/images_link.png" /><span>Images</span>
+            </a>
         </li>
         <li class="site-link">
-            Video
+            <a href="@Url.Action("Video")">
+                <img src="~/assets/web/video_link.png" /><span>Video</span>
+            </a>
         </li>
         <li class="site-link">
-            Info
+            <a href="@Url.Action("Info")">
+                <img src="~/assets/web/info_link.png" /><span>Info</span>
+            </a>
         </li>
     </ul>
 </div>

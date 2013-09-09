@@ -279,6 +279,8 @@
     <Content Include="assets\text\shows.txt" />
     <Content Include="assets\video\motu_dvd_cover.jpg" />
     <Content Include="assets\video\remastering_postr.mov" />
+    <Content Include="assets\web\images_link.png" />
+    <Content Include="assets\web\music_link.png" />
     <Content Include="CSS\Days-webfont.svg" />
     <Content Include="assets\web\index_hero.png" />
     <Content Include="CSS\index.css" />
