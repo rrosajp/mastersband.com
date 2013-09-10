@@ -32,6 +32,15 @@
     margin: 0 0 0 115px;
     overflow-y: scroll;
 }
+    .playlist-entries li a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .playlist-entries li.active a {
+        color: #33a;
+        font-weight: bold;
+    }
 
 /* menu */
 .site-menu {
@@ -41,6 +50,7 @@
 
 .site-links {
     padding: 0;
+    margin-left: 0;
 }
 .site-link {
     display: block;
@@ -49,6 +59,7 @@
     margin: 0 0 1em 0;
     padding: 0;
     background-color: #dfdfdf;
+    list-style-type: none;
 }
 .site-link a {
     padding: 0 0.5em;

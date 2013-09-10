@@ -12,6 +12,10 @@ namespace mastersband.App_Start
                     "~/CSS/normalize.css",
                     "~/CSS/site.css"
                 ));
+
+            bundles.Add(new ScriptBundle("~/scripts/app")
+                .Include(
+                    "~/Scripts/jquery-{version}.js"));
         }
     }
 }

@@ -10,7 +10,7 @@
     @Styles.Render("~/CSS/styles")
     @RenderSection("styles", false)
     <!--[if lt IE 9]>
-    <script src="~/JavaScript/html5shiv.js"></script>
+    <script src="~/Scripts/html5shiv.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -21,5 +21,7 @@
         </header>
         @RenderBody()
     </div>
+    @Scripts.Render("~/scripts/app")
+    @RenderSection("scripts", false)
 </body>
 </html>

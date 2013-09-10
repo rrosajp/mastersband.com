@@ -1,4 +1,5 @@
-﻿@section styles
+﻿@using mastersband.Helpers
+@section styles
 {
     <link rel="stylesheet" href="~/CSS/index.css" />
 }
@@ -11,19 +12,12 @@
     <h2 class="album-title">Don't Block the Box</h2>
     <div class="playlist clearfix">
         <img src="~/assets/audio/motu_dbtb/folder_thumb.jpg" />
-        <ul class="playlist-entries">
-            <li>First</li>
-            <li>Second</li>
-            <li>Second</li>
-            <li>Second</li>
-            <li>Second</li>
-            <li>Second</li>
-            <li>Second</li>
-        </ul>
+        <ol class="playlist-entries">
+            @Html.Playlist("~/assets/audio/motu_dbtb")
+        </ol>
     </div>
-    <audio id="audio" preload="auto" tabindex="0" controls>
+    <audio id="audioplayer" preload="auto" tabindex="0" controls>
         <source src="~/assets/audio/motu_dbtb/Masters of the Universe - Don't Block the Box - 01 Tree Veins.mp3" />
-        <p>Your browser does not support HTML5 audio. Download link: XXX</p>
     </audio>
 </div>
 <div class="site-menu">
@@ -50,3 +44,43 @@
         </li>
     </ul>
 </div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        (function () {
+            var a = document.createElement('audio');
+            if (!a.canPlayType)
+                return;
+            
+            var audio = $('#audioplayer');
+            var playlist = $('.playlist-entries');
+            var tracks = playlist.find('li a');
+
+            var current = $(tracks[0]).parent();
+            current.addClass('active');
+            
+            function init() {
+                audio[0].volume = .5;
+
+                tracks.on('click', function(e) {
+                    e.preventDefault();
+                    var link = $(this);
+                    current && current.removeClass('active');
+                    current = link.parent();
+                    run(link, audio[0]);
+                });
+            }
+            
+            function run(link, player) {
+                player.src = link.attr('href');
+                var li = link.parent();
+                li.addClass('active');
+                player.load();
+                player.play();
+            }
+
+            init();
+        })();
+    </script>
+}
