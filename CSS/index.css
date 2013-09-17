@@ -6,11 +6,11 @@
     margin: 0 auto;
 }
 
-.audio-player audio {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-}
+    .audio-player audio {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
 
 .album-title {
     margin: 0;
@@ -22,16 +22,19 @@
     height: 100px;
     width: 100%;
 }
-    .playlist img {
-        height: 100%;
-        float: left;
-    }
+
+.album-cover {
+    height: 100%;
+    float: left;
+    cursor: pointer;
+}
 
 .playlist-entries {
     height: 100%;
     margin: 0 0 0 115px;
     overflow-y: scroll;
 }
+
     .playlist-entries li a {
         text-decoration: none;
         color: #333;
@@ -52,6 +55,7 @@
     padding: 0;
     margin-left: 0;
 }
+
 .site-link {
     display: block;
     font-size: 2em;
@@ -61,19 +65,72 @@
     background-color: #dfdfdf;
     list-style-type: none;
 }
-.site-link a {
-    padding: 0 0.5em;
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    line-height: 2em;
-    position: relative;
-}
-    .site-link a img {
-        position: absolute;
-        top: 0.25em;
+
+    .site-link a {
+        padding: 0 0.5em;
+        text-decoration: none;
+        display: inline-block;
+        width: 100%;
+        line-height: 2em;
+        position: relative;
     }
 
-    .site-link a span {
+        .site-link a img {
+            position: absolute;
+            top: 0.25em;
+        }
+
+        .site-link a span {
+            padding-left: 2em;
+        }
+
+/* 
+ *   responsive - mobile
+ */
+
+@media screen and (max-width: 40em) {
+    .audio-player {
+        max-width: none;
+        background-color: #fff;
+        padding: 0 0.5em;
+    }
+
+    .album-title {
+        display: none;
+    }
+
+    .playlist-entries {
+        font-size: 0.85em;
+        line-height: 1.5em;
         padding-left: 2em;
     }
+
+    .site-menu {
+        max-width: none;
+        margin: 0 0.5em;
+    }
+
+    .site-link {
+        font-size: 1.25em;
+        height: 2em;
+        margin-bottom: 0.5em;
+        background-color: #fff;
+        display: inline-block;
+        width: 40%;
+    }
+
+        .site-link a {
+            padding: 0;
+            line-height: 2em;
+        }
+
+            .site-link a img {
+                height: 2em;
+                width: 2em;
+                top: 0;
+            }
+
+            .site-link a span {
+                padding-left: 2.5em;
+            }
+}

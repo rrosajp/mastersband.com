@@ -11,12 +11,12 @@
 <div class="audio-player">
     <h2 class="album-title">Don't Block the Box</h2>
     <div class="playlist clearfix">
-        <img src="~/assets/audio/motu_dbtb/folder_thumb.jpg" />
+        <img class="album-cover" src="~/assets/audio/motu_dbtb/folder_thumb.jpg" />
         <ol class="playlist-entries">
             @Html.Playlist("~/assets/audio/motu_dbtb")
         </ol>
     </div>
-    <audio id="audioplayer" preload="auto" tabindex="0" controls>
+    <audio id="audioplayer" preload="auto" tabindex="0" @(Request.Browser.IsMobileDevice? "" : "controls")>
         <source src="~/assets/audio/motu_dbtb/Masters of the Universe - Don't Block the Box - 01 Tree Veins.mp3" />
     </audio>
 </div>
@@ -53,7 +53,7 @@
             if (!a.canPlayType)
                 return;
             
-            var audio = $('#audioplayer');
+            var audio = $('#audioplayer')[0];
             var playlist = $('.playlist-entries');
             var tracks = playlist.find('li a');
 
@@ -61,26 +61,39 @@
             current.addClass('active');
             
             function init() {
-                audio[0].volume = .5;
+                audio.volume = .5;
 
                 tracks.on('click', function(e) {
                     e.preventDefault();
                     var link = $(this);
                     current && current.removeClass('active');
                     current = link.parent();
-                    run(link, audio[0]);
+                    run(link);
                 });
             }
             
-            function run(link, player) {
-                player.src = link.attr('href');
+            function run(link) {
+                audio.src = link.attr('href');
                 var li = link.parent();
                 li.addClass('active');
-                player.load();
-                player.play();
+                audio.load();
+                audio.play();
             }
 
             init();
+
+            var $albumCover = $('.album-cover');
+            $albumCover.attr('title', 'Play');
+            
+            $albumCover.on('click', function() {
+                if (audio.paused) {
+                    $albumCover.attr('title', 'Pause');
+                    audio.play();
+                } else {
+                    $albumCover.attr('title', 'Play');
+                    audio.pause();
+                }
+            });
         })();
     </script>
 }

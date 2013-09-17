@@ -17,9 +17,10 @@ body {
 }
 
 .page-center {
+    width: 100%;
     max-width: 60em;
     margin: 0 auto;
-    padding: 0 2em;
+    padding: 0;
 }
 
 .hero img {
@@ -53,4 +54,21 @@ body {
 
 .clearfix {
     display: inline-block;
+}
+
+/* 
+ *   responsive - mobile
+ */
+
+@media screen and (max-width: 40em) {
+    header {
+        position: relative;
+    }
+
+    .logo {
+        text-align: left;
+        font-size: 1.25em;
+        margin: 1em 0 0.5em 0;
+        padding-left: 0.375em;
+    }
 }
