@@ -1,18 +1,32 @@
 ﻿/* audio player */
-
-.audio-player {
-    background-color: #dfdfdf;
-    max-width: 75%;
-    margin: 0 auto;
+audio {
+    -ms-border-radius: 0;
+    border-radius: 0;
 }
 
-    .audio-player audio {
+.audio-player {
+    background-color: #454545;
+    background-color: rgba(69, 69, 69, 0.5);
+    max-width: 75%;
+    margin: 0 auto;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 2px #0f0f0f;
+    -webkit-box-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+    -ms-box-shadow: 1px 1px 2px #0f0f0f;
+    -ms-box-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+    box-shadow: 1px 1px 2px #0f0f0f;
+    box-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+}
+
+.audio-player audio {
         display: block;
         margin: 0 auto;
         width: 100%;
     }
 
 .album-title {
+    color: #C7008B;
     margin: 0;
     padding: 0.5em;
     font-size: 1em;
@@ -21,6 +35,7 @@
 .playlist {
     height: 100px;
     width: 100%;
+    overflow: hidden;
 }
 
 .album-cover {
@@ -30,18 +45,24 @@
 }
 
 .playlist-entries {
+    color: #ccc;
     height: 100%;
     margin: 0 0 0 115px;
     overflow-y: scroll;
+    overflow-x: hidden;
+    -moz-text-overflow: ellipsis;
+    text-overflow: ellipsis;
 }
 
     .playlist-entries li a {
         text-decoration: none;
-        color: #333;
+        color: #008BC7;
+        -moz-text-overflow: ellipsis;
+        text-overflow: ellipsis;
     }
 
     .playlist-entries li.active a {
-        color: #33a;
+        color: #C7008B;
         font-weight: bold;
     }
 
@@ -62,11 +83,16 @@
     height: 2em;
     margin: 0 0 1em 0;
     padding: 0;
-    background-color: #dfdfdf;
+    background-color: #454545;
+    background-color: rgba(69, 69, 69, 0.5);
     list-style-type: none;
+    -webkit-box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.75);
+    -moz-box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.75);
+    box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.75);
 }
 
     .site-link a {
+        color: #008BC7;
         padding: 0 0.5em;
         text-decoration: none;
         display: inline-block;
@@ -91,32 +117,50 @@
 @media screen and (max-width: 40em) {
     .audio-player {
         max-width: none;
-        background-color: #fff;
-        padding: 0 0.5em;
+        padding: 0 5%;
     }
 
     .album-title {
         display: none;
     }
 
+    .album-cover {
+        height: auto;
+        width: 25%;
+    }
+
     .playlist-entries {
         font-size: 0.85em;
         line-height: 1.5em;
         padding-left: 2em;
+        margin-left: 25%;
+        color: #e5bd9b;
     }
+
+        .playlist-entries li a {
+            color: #e5bd9b;
+        }
+
+        .playlist-entries li.active a {
+            color: #cb7123;
+        }
 
     .site-menu {
         max-width: none;
-        margin: 0 0.5em;
+        margin: 0 5%;
     }
 
     .site-link {
         font-size: 1.25em;
         height: 2em;
         margin-bottom: 0.5em;
-        background-color: #fff;
+        margin-right: 0.5%;
+        width: 49%;
+        background-color: transparent;
         display: inline-block;
-        width: 40%;
+        -webkit-box-shadow: none;
+        -ms-box-shadow: none;
+        box-shadow: none;
     }
 
         .site-link a {
@@ -133,4 +177,38 @@
             .site-link a span {
                 padding-left: 2.5em;
             }
+}
+
+/*
+ *   responsive - wide desktop
+ */
+
+@media screen and (min-width: 65em) {
+    .audio-player {
+        float: right;
+        margin: 0 2em 0 0;
+        width: 45%;
+    }
+
+    .album-cover {
+        height: 150px;
+    }
+
+    .playlist {
+        height: 290px;
+    }
+
+    .playlist-entries {
+        overflow-y: auto;
+    }
+
+    .site-menu {
+        float: left;
+        margin: 0 0 0 2em;
+        width: 45%;
+    }
+
+    .site-links {
+        margin-top: 0;
+    }
 }

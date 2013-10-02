@@ -288,8 +288,11 @@
     <Content Include="assets\text\shows.txt" />
     <Content Include="assets\video\motu_dvd_cover.jpg" />
     <Content Include="assets\video\remastering_postr.mov" />
+    <Content Include="assets\web\bk_texture.png" />
     <Content Include="assets\web\images_link.png" />
+    <Content Include="assets\web\info_link.png" />
     <Content Include="assets\web\music_link.png" />
+    <Content Include="assets\web\video_link.png" />
     <Content Include="CSS\Days-webfont.svg" />
     <Content Include="assets\web\index_hero.png" />
     <Content Include="CSS\index.css" />
@@ -301,7 +304,9 @@
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

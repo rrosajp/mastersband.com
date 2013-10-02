@@ -1,7 +1,12 @@
 ﻿@font-face {
     font-family: 'daysregular';
     src: url('Days-webfont.eot');
-    src: url('Days-webfont.eot?#iefix') format('embedded-opentype'), url('Days-webfont.woff') format('woff'), url('Days-webfont.ttf') format('truetype'), url('Days-webfont.svg#daysregular') format('svg');
+    src: url('Days-webfont.eot?#iefix') format('embedded-opentype'),
+        url('Days-webfont.svg') format('svg'), 
+        url('Days-webfont.svg#daysregular') format('svg'),
+         url('Days-webfont.woff') format('woff'),
+         url('Days-webfont.ttf') format('truetype');
+        
     font-weight: normal;
     font-style: normal;
 }
@@ -11,16 +16,22 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
 
 body {
-    color: #333;
+    color: #C7A487;
 }
 
 .page-center {
     width: 100%;
-    max-width: 60em;
     margin: 0 auto;
     padding: 0;
+    background: #333;
+    background-image: url('../assets/web/bk_texture.png');
+    min-height: 100%;
 }
 
 .hero img {
@@ -34,11 +45,13 @@ body {
     font-size: 3em;
     text-align: center;
     margin: 0.25em auto;
+    -ms-text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+    text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
 }
 
-    .logo a {
+.logo a {
         text-decoration: none;
-        color: #333;
+        color: #8BC700;
     }
 
 /* utility */
@@ -61,6 +74,9 @@ body {
  */
 
 @media screen and (max-width: 40em) {
+    body {
+        background-color: #333;
+    }
     header {
         position: relative;
     }
@@ -68,7 +84,37 @@ body {
     .logo {
         text-align: left;
         font-size: 1.25em;
-        margin: 1em 0 0.5em 0;
-        padding-left: 0.375em;
+        margin: 0.5em 0;
+        padding-left: 5%;
+    }
+}
+
+/*
+ *   responsive - wide desktop
+ */
+
+@media screen and (min-width: 65em) {
+    body {
+        background-color: #000;
+        background-image: url('../assets/image/ragtime/06.jpg');
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    .page-center {
+        float: left;
+        max-width: 65em;
+        -moz-min-width: 50%;
+        -ms-min-width: 50%;
+        -o-min-width: 50%;
+        -webkit-min-width: 50%;
+        min-width: 50%;
+    }
+
+    .hero img {
+        display: block;
+        margin: 0 auto;
+    }
+    .logo {
+        font-size: 4em;
     }
 }
